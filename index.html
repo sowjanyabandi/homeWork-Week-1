@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="lib/mocha.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h3>CaptainAmerica</h3>
+    <form onsubmit="submitComment(); return false">
+        <div class="formSection">
+          <label for="name">Name:</label>
+          <input type="text" id="name">
+        </div>
+        
+        <div class="button">
+          <button type="default">change your Hero name here</button>
+        </div>
+      </form>
+    
+<img id = 'inn' src="https://cdn.pixabay.com/photo/2016/01/10/18/58/super-hero-1132272__340.jpg"  > 
+<img id = 'dagger' src ="https://sabersmith.com/wp-content/uploads/2017/12/goblin-dagger-w-guard.jpg"  >
+ <img id = 'bag' src = "https://www.leisureclub.pk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/b/ibbag406.jpg" > 
+
+ <link rel="stylesheet" type="text/css" href="index.css" />
+
+
+
+  <!-- 👍 YOUR HTML HERE 👍 -->
+
+
+
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+
+  <div id="mocha">
+  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+  </div>
+
+  <script src="lib/chai.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script src="lib/sinon.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="lib/game_logic.test.js"></script>
+
+</body>
+</html>
