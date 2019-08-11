@@ -1,6 +1,6 @@
 // Write your JS here
 //console.log('object')
-const hero = { name : 'Captain America',
+let hero = { name : 'CaptainAmerica ',
                heroic: true,
                inventory : [],
                health: 10,
@@ -16,11 +16,14 @@ const hero = { name : 'Captain America',
 function rest(hero)
 {
     
-     hero.health =10;  
+     
 
         if(hero.health ==10)
         {
          alert('health is already 10') ;
+         }
+         else{
+            hero.health =10;  
          }
         //return 'health is already 10';
     return hero;
@@ -63,7 +66,7 @@ const imgDagger = document.getElementById('dagger');
 
 function equipWeapon(hero_like){
 
-    if(hero_like.inventory[0]!=undefined)
+    if(hero_like.inventory[0] !=undefined)
     {
     hero_like.weapon = hero_like.inventory[0];
     }
@@ -78,39 +81,30 @@ function equipWeapon(hero_like){
     //const testWeapon = { type: 'test', damage: 0 }
         hero.weapon = hero.inventory[0]
      }
-   // equipWeapon(testHero)
-//equipWeapon(hero);
-// function displayHeroDetails(hero){
-//     console.log(`${hero.name}`)
-//    // document.getElementById("Name").innerText = hero.name
-//     document.getElementById("Health").innerText = hero.health
-//     document.getElementById("weaponType").innerText = hero.weapon.type
-//     document.getElementById("weapondamage").innerText = hero.weapon.damage
+  
+function displaystatus(){//
+    
+    let herostats = document.getElementById("herostats")
+    herostats.innerText   =`
+                    Name : ${hero.name}
+                    Health : ${hero.health}
+                    WeaponType : ${hero.weapon.type}
+                    WeaponDamage : ${hero.weapon.damage}`
+    
+    
+    
+ let newheroname = document.getElementById("name").value
 
-// }
-function displaystatus(herodetails){
-    const details =`
-                    Name : ${herodetails.name}
-                    Health : ${herodetails.health}
-                    WeaponType : ${herodetails.weapon.type}
-                    WeaponDamage : ${herodetails.weapon.damage}`
-                    
-document.write(details)
-    //console.log(details)
+
+ hero.name = newheroname
+ console.log(newheroname)
+ console.log(hero.name)
+
+
+
 }
-function submitComment()
-{
-    const h3 = document.createElement('h3'); 
-    const inputField = document.getElementById('name')
-   let name = inputField.value;
-   hero.name = name
-   comment.appendChild(h3)
-   h3.innerHTML = `${name} - is your hero`
-}
-console.log(hero.name)
-// function updateHeroName(rename){
-//     ()
-// }
-// document.write(hero.name)
-displaystatus(hero)
+ 
+
+
+
 
